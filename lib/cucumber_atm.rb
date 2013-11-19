@@ -32,3 +32,9 @@ class CashSlot
     @contents = amount
   end
 end
+
+require 'sinatra'
+
+get '/' do
+  'Welcome to our nice bank!'
+end
