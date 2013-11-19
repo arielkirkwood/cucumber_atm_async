@@ -1,4 +1,9 @@
-module KnowsTheDomain
+module KnowsTheUserInterface
+  class UserInterface
+    def withdraw_from(account, amount)
+    end
+  end
+
   def my_account
     @my_account ||= Account.new
   end
@@ -12,4 +17,4 @@ module KnowsTheDomain
   end
 end
 
-World(KnowsTheDomain)
+World(KnowsTheUserInterface)
