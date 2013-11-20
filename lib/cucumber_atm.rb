@@ -41,14 +41,40 @@ get '/' do
     <body>
       <form action="/withdraw" method="post">
         <label for="amount">Amount</label>
-        <input type="text" id="amount" name="amount">
-        <button type="submit">Withdraw</button>
+        <input type="hidden" id="amount" name="amount" value="20">
+        <button type="submit">$20</button>
+      </form>
+      <form action="/withdraw" method="post">
+        <label for="amount">Amount</label>
+        <input type="hidden" id="amount" name="amount" value="40">
+        <button type="submit">$40</button>
+      </form>
+      <form action="/withdraw" method="post">
+        <label for="amount">Amount</label>
+        <input type="hidden" id="amount" name="amount" value="60">
+        <button type="submit">$60</button>
+      </form>
+      <form action="/withdraw" method="post">
+        <label for="amount">Amount</label>
+        <input type="hidden" id="amount" name="amount" value="80">
+        <button type="submit">$80</button>
+      </form>
+      <form action="/withdraw" method="post">
+        <label for="amount">Amount</label>
+        <input type="hidden" id="amount" name="amount" value="100">
+        <button type="submit">$100</button>
       </form>
     </body>
   </html>
   }
 end
 
+set :cash_slot, CashSlot.new
+set :account do
+  fail 'account has not been set'
+end
+
 post '/withdraw' do
-  fail "I don't know how to withdraw yet, sorry"
+  teller = Teller.new(settings.cash_slot)
+  teller.withdraw_from(settings.account, params[:amount].to_i)
 end
