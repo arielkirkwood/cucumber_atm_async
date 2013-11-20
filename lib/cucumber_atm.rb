@@ -64,6 +64,11 @@ get '/' do
         <input type="hidden" id="amount" name="amount" value="100">
         <button type="submit">$100</button>
       </form>
+      <form action="/withdraw" method="post">
+        <label for="amount">Amount</label>
+        <input type="hidden" id="amount" name="amount" value="200">
+        <button type="submit">$200</button>
+      </form>
     </body>
   </html>
   }
