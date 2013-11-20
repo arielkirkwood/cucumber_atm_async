@@ -5,7 +5,7 @@ module KnowsTheUserInterface
     def withdraw_from(account, amount)
       Sinatra::Application.account = account
       visit '/'
-      click_button '$'+amount.to_s
+      click_button "$#{amount}"
     end
   end
 
