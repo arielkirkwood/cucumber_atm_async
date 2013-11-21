@@ -1,35 +1,35 @@
 <html>
   <body>
+    <h1>Choose an amount to withdraw:</h1>
     <p class="message"><%= @message %></p>
     <form action="/withdraw" method="post">
-      <label for="amount">Amount</label>
       <input type="hidden" id="amount" name="amount" value="20">
       <button type="submit">$20</button>
     </form>
     <form action="/withdraw" method="post">
-      <label for="amount">Amount</label>
       <input type="hidden" id="amount" name="amount" value="40">
       <button type="submit">$40</button>
     </form>
     <form action="/withdraw" method="post">
-      <label for="amount">Amount</label>
       <input type="hidden" id="amount" name="amount" value="60">
       <button type="submit">$60</button>
     </form>
     <form action="/withdraw" method="post">
-      <label for="amount">Amount</label>
       <input type="hidden" id="amount" name="amount" value="80">
       <button type="submit">$80</button>
     </form>
     <form action="/withdraw" method="post">
-      <label for="amount">Amount</label>
       <input type="hidden" id="amount" name="amount" value="100">
       <button type="submit">$100</button>
     </form>
     <form action="/withdraw" method="post">
-      <label for="amount">Amount</label>
       <input type="hidden" id="amount" name="amount" value="200">
       <button type="submit">$200</button>
+    </form>
+    <h1>Check Your Balance</h1>
+    <form action="/balance" method="post">
+      <label for="amount">Amount</label>
+      <button type="submit">Check Balance</button>
     </form>
   </body>
 </html>
