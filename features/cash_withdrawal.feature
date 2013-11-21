@@ -9,7 +9,5 @@ Feature: Cash Withdrawal
     Examples:
       | amount_credited | amount_withdrawn | amount_dispensed | remaining_balance |
       | 100 | 20 | 20 | 80 |
-      | 100 | 40 | 40 | 60 |
       | 100 | 60 | 60 | 40 |
-      | 100 | 80 | 80 | 20 |
       | 100 | 100 | 100 | 0 |
