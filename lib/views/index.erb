@@ -1,4 +1,7 @@
 <html>
+  <head>
+    <title>Cucumber ATM</title>
+  </head>
   <body>
     <h1>Choose an amount to withdraw:</h1>
     <p class="message"><%= @message %></p>
@@ -28,7 +31,6 @@
     </form>
     <h1>Check Your Balance</h1>
     <form action="/balance" method="post">
-      <label for="amount">Amount</label>
       <button type="submit">Check Balance</button>
     </form>
   </body>
