@@ -19,6 +19,10 @@ class Teller
     @cash_slot = cash_slot
   end
 
+  def check_balance(account)
+    account.balance
+  end
+
   def withdraw_from(account, amount_requested)
     if account.balance >= amount_requested
       account.debit(amount_requested)
@@ -57,4 +61,10 @@ post '/withdraw' do
   teller.withdraw_from(settings.account, params[:amount].to_i)
   @message = teller.message
   erb :index
+end
+
+post '/balance' do
+  teller = Teller.new(settings.cash_slot)
+  @balance = teller.check_balance(settings.account)
+  erb :balance
 end

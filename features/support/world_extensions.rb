@@ -7,6 +7,12 @@ module KnowsTheUserInterface
       visit '/'
       click_button "$#{amount}"
     end
+
+    def check_balance(account)
+      Sinatra::Application.account = account
+      visit '/'
+      click_button "Check Balance"
+    end
   end
 
   def my_account
