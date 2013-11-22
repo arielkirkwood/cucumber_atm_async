@@ -1,5 +1,5 @@
 require_relative 'transaction_queue'
-require_relative 'balance_store'
+require_relative 'account'
 
 class Teller
   attr_accessor :message
