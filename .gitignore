@@ -1,7 +1,7 @@
 capybara*
 
-# no need to store balance_store.rb flat files
-balance
+# no need to store our test database files
+db/*.db
 
 # nor our message queue flat files
 messages/
