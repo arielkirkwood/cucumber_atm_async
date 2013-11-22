@@ -10,4 +10,5 @@ group :development do
   gem 'cucumber', '1.2.5'
   gem 'capybara', '2.1.0'
   gem 'launchy', '2.1.0'
+  gem 'database_cleaner', '0.8.0'
 end
